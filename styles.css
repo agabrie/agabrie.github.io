@@ -12,7 +12,7 @@ body{
 	height: 40em;
 	/* background:radial-gradient(ellipse farthest-corner at 0% center,rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.0)); */
 	/* background: rgba(0, 0, 0, 0.5); */
-	background: linear-gradient(90deg, rgba(0,0,0,.95),rgba(0,0,0,0));
+	background: linear-gradient(90deg, rgba(0,0,0,.85),rgba(0,0,0,0));
 	flex-direction: column;
 	overflow: hidden;
 }
@@ -64,37 +64,10 @@ h1{
 	position: absolute;
 	width: 10em;
 	aspect-ratio: 1;
+	box-shadow:1px 1px 10px rgb(0 0 0 / 40%);
 	/* border-radius: 10em; */
 	background-color: red;
 	z-index: -1;
 	transition: all 1s ease-in-out;
 	animation: contort 5s linear 0s infinite alternate;
-}
-.blob-1{
-	top: 98%;
-	left:12%;
-	border-radius: 70% 50% 100% 60% / 40% 70% 70% 100%;
-	transform: rotate(30deg);
-	animation: contort 8s linear 1s infinite alternate;
-}
-.blob-2 {
-	top: 10%;
-	left: 10%;
-	border-radius: 70% 50% 100% 60% / 40% 70% 70% 100%;
-	transform: rotate(240deg);
-	animation: contort 7s linear 3s infinite alternate;
-}
-.blob-3 {
-	top: 30%;
-	left: 50%;
-	border-radius: 70% 50% 100% 60% / 40% 70% 70% 100%;
-	transform: rotate(45deg);
-	animation: contort 3s linear 2s infinite alternate;
-}
-.blob-4 {
-	top: 20%;
-	left: 60%;
-	transform: rotate(180deg);
-	border-radius: 70% 50% 100% 60% / 40% 70% 70% 100%;
-	animation: contort 5s linear 1s infinite alternate;
 }
