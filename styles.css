@@ -14,7 +14,7 @@ body{
 	/* height: 40em; */
 	/* background:radial-gradient(ellipse farthest-corner at 0% center,rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.0)); */
 	/* background: rgba(0, 0, 0, 0.5); */
-	background: linear-gradient(90deg, rgba(0,0,0,.2),rgba(255,255,255,.5));
+	background: linear-gradient(90deg, rgba(0,0,0,.2),rgba(255,255,255,.2));
 	flex-direction: column;
 	overflow: hidden;
 }
@@ -31,7 +31,7 @@ body{
 	/* -webkit-background-clip: text; */
 	/* -webkit-text-fill-color:transparent */
 	
-	width: 50rem;
+	/* width: 50rem; */
 }
 h1{
 	font-size: 4em;
@@ -83,4 +83,13 @@ h2 {
 	z-index: -1;
 	transition: all 1s ease-in-out;
 	animation: contort 5s linear 0s infinite alternate;
+}
+.about-me{
+	box-shadow: 1px 1px 10px rgb(0 0 0 / 40%);
+	border-radius: 1em;
+	padding: 1rem 3rem;
+	background: linear-gradient(90deg, rgba(255, 255, 255, .2), rgba(0, 0, 0, .2));
+}
+p{
+	font-size: 1.5rem;
 }
