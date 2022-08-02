@@ -1,0 +1,100 @@
+html{
+	margin:0;
+	padding: 0;
+	font-size: 10px;
+}
+body{
+	margin: 0;
+}
+.header{
+	position: relative;
+	display: flex;
+	height: 40em;
+	/* background:radial-gradient(ellipse farthest-corner at 0% center,rgba(0, 0, 0, 1),rgba(0, 0, 0, 0.0)); */
+	/* background: rgba(0, 0, 0, 0.5); */
+	background: linear-gradient(90deg, rgba(0,0,0,.95),rgba(0,0,0,0));
+	flex-direction: column;
+	overflow: hidden;
+}
+.header-content{
+	z-index: 1;
+}
+.name{
+	/* background-image:linear-gradient(90deg,rgba(255, 255, 255, 1),
+		rgba(0, 0, 0, 0.95)); */
+	/* background-size: 100%; */
+	/* background-repeat: repeat; */
+	/* -webkit-background-clip: text; */
+	/* -webkit-text-fill-color:transparent */
+	color: whitesmoke;
+}
+h1{
+	font-size: 4em;
+}
+@keyframes contort{
+	0%{
+		border-radius: 70% 50% 100% 60% / 40% 70% 70% 100%;
+		/* border-radius: 40% 80% 40% 100%/ 60% 30% 100% 50%; */
+		/* top: 70%; */
+			/* left: 40%; */
+	}
+	25%{
+				border-radius: 70% 100% 70% 100% / 50% 40% 60% 70%;
+	}
+	50%{
+		border-radius:  70% 70% 100% 40%/  50% 100% 60% 70%;
+	}
+	75% {
+		border-radius:  70% 100% 40% 50%/  100% 60% 70% 70%;
+	}
+	100%{
+		border-radius: 50%;
+		/* border-radius: 1em 1em 1em 1em; */
+		/* top:0%; */
+		/* left: 70%; */
+	}
+}
+.floating-shapes{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border: 1px dashed darkcyan;
+}
+.floating-shapes .blob{
+	position: absolute;
+	width: 10em;
+	aspect-ratio: 1;
+	/* border-radius: 10em; */
+	background-color: red;
+	z-index: -1;
+	transition: all 1s ease-in-out;
+	animation: contort 5s linear 0s infinite alternate;
+}
+.blob-1{
+	top: 98%;
+	left:12%;
+	border-radius: 70% 50% 100% 60% / 40% 70% 70% 100%;
+	transform: rotate(30deg);
+	animation: contort 8s linear 1s infinite alternate;
+}
+.blob-2 {
+	top: 10%;
+	left: 10%;
+	border-radius: 70% 50% 100% 60% / 40% 70% 70% 100%;
+	transform: rotate(240deg);
+	animation: contort 7s linear 3s infinite alternate;
+}
+.blob-3 {
+	top: 30%;
+	left: 50%;
+	border-radius: 70% 50% 100% 60% / 40% 70% 70% 100%;
+	transform: rotate(45deg);
+	animation: contort 3s linear 2s infinite alternate;
+}
+.blob-4 {
+	top: 20%;
+	left: 60%;
+	transform: rotate(180deg);
+	border-radius: 70% 50% 100% 60% / 40% 70% 70% 100%;
+	animation: contort 5s linear 1s infinite alternate;
+}
