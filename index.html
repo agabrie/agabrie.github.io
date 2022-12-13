@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="assets/css/styles.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,600;1,900&display=swap" rel="stylesheet">
@@ -38,6 +38,17 @@
 			<section id="projects" class="section-container">
 				<div class="section-header"><h2>Projects</h2></div>
 				<div class="section-content">
+					<embed id="project-preview" height="500" width="750" hidden/>
+					<div  class="project-container">
+						<div class="project-thumbnail">
+							<img class="project-image" src="assets/images/portfolio-screenshot.png">
+							<button id="btn-project-view" class="btn-view-live">live</button>
+						</div>
+						<div class="project-description">
+							<a href="https://agabrie.github.io/portfolio/" target="__blank">Portfoliio</a>
+							<p>This is my first attempt at making a portfolio<p>
+						</div>
+					</div>
 				</div>
 			</section>
 			<section id="skills" class="section-container">
@@ -59,5 +70,5 @@
 		</main>
 		<footer class="footer"></footer>
 	</body>
-	<script type="application/javascript" src="index.js"></script>
+	<script type="application/javascript" src="assets/js/index.js"></script>
 </html>

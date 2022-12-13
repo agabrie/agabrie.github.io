@@ -98,7 +98,7 @@ p{
 .navigation-bar{
 	border-bottom:solid 2px grey ;
 	/* background-color: black; */
-	height: 100px;
+	height: 10rem;
 	display: flex;
 	align-items: center;
 }
@@ -159,6 +159,7 @@ p{
 }
 .section-content{
 	padding: 2rem;
+	width: 100%;
 }
 .section-header{
 	display: flex;
@@ -167,4 +168,36 @@ p{
 	padding-right: 2rem;
 	min-width: 30vw;
 	border-right: 2px solid grey;
+}
+.project-container{
+	display: flex;
+	align-items:center;
+	height:20rem;
+}
+.project-image{
+	width:30rem;
+	max-height:18rem;
+}
+.project-container:hover{
+	background-color:   rgba(255, 255, 255, .2);
+}
+.project-thumbnail{
+	position: relative;
+	margin: 1rem;
+}
+.btn-view-live{
+	position: absolute;
+	bottom:1rem;
+	right:1rem;
+	padding: 1rem;
+	border: none;
+	color: white;
+	background-color: rgba(0, 128, 128, 0.75);
+}
+.btn-view-live:hover{
+	background-color:rgba(0, 128, 128, 1);
+}
+.project-description{
+	text-decoration: none;
+	color: white;
 }

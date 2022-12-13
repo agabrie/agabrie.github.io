@@ -34,3 +34,21 @@ function createBlob(x, y,size) {
 function getRandomInteger(min, max) {
 	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+let embed = document.getElementById("project-preview");
+
+console.log(embed)
+
+let btnView = document.getElementById("btn-project-view");
+console.log(btnView)
+
+btnView.addEventListener('click',(e)=>{
+	let projectParent = e.target.parentElement.parentElement;
+	let projectDescription = projectParent.children[1]
+	let projectAnchor = projectDescription.children[0]
+	
+	let url = projectAnchor.href
+	console.log(url, embed.src)
+	embed.src = url;
+	embed.removeAttribute("hidden")
+})
