@@ -7,7 +7,7 @@ function generateBlobs() {
 	for (let i = 0; i <= num_blobs; i++) {
 		let x = getRandomInteger(0, 100) - 10;
 		let y = getRandomInteger(0, 100) - 10;
-		let size = getRandomInteger(5, 20);
+		let size = getRandomInteger(5, 40);
 		let blob_element = createBlob(x, y, size);
 		floating_shapes.appendChild(blob_element);
 	}
