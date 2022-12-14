@@ -5,6 +5,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,600;1,900&display=swap" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.6.2.slim.js" integrity="sha256-OflJKW8Z8amEUuCaflBZJ4GOg4+JnNh9JdVfoV+6biw=" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<div id="floating-shapes" class="floating-shapes" ></div>
@@ -38,15 +39,15 @@
 			<section id="projects" class="section-container">
 				<div class="section-header"><h2>Projects</h2></div>
 				<div class="section-content">
-					<embed id="project-preview" height="500" width="750" hidden/>
+					<embed id="project-preview" class="embed-preview" hidden/>
 					<div  class="project-container">
 						<div class="project-thumbnail">
 							<img class="project-image" src="assets/images/portfolio-screenshot.png">
 							<button id="btn-project-view" class="btn-view-live">live</button>
 						</div>
-						<div class="project-description">
-							<a href="https://agabrie.github.io/portfolio/" target="__blank">Portfoliio</a>
-							<p>This is my first attempt at making a portfolio<p>
+						<div class="project-details">
+							<a class="project-name" href="https://agabrie.github.io/portfolio/" target="__blank">Portfoliio</a>
+							<p class="project-description">This is my first attempt at making a portfolio<p>
 						</div>
 					</div>
 				</div>
@@ -55,10 +56,10 @@
 				<div class="section-header"><h2>Skills</h2></div>
 				<div class="section-content">
 					<ul class="skills">
-						<li>Problem solving</li>
-						<li>API Development</li>
-						<li>Creating Content Management Systems</li>
-						<li>UX/UI Design</li>
+						<li class="skill-container"><p>Problem solving</p><div class="proficiency">★★★★★</div></li>
+						<li class="skill-container"><p>API Development</p><div class="proficiency">★★☆☆☆</div></li>
+						<li class="skill-container"><p>Content Management Systems</p><div class="proficiency">★★☆☆☆</div></li>
+						<li class="skill-container"><p>UX/UI Design</p><div class="proficiency">★★☆☆☆</div></li>
 					</ul>
 				</div>
 			</section>
@@ -68,7 +69,10 @@
 				</div>
 			</section>
 		</main>
-		<footer class="footer"></footer>
+		<footer class="footer">
+			<p>Created by Abduraghmaan Gabriels</p> 
+			<div>Last Updated: <span id="last-date">14 December 2022</span></div>
+		</footer>
 	</body>
 	<script type="application/javascript" src="assets/js/index.js"></script>
 </html>
