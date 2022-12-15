@@ -17,7 +17,7 @@ function getLatestDeployment(repository_name){
 		"timeout": 0,
 		"headers": {
 			"Accept": "application/vnd.github+json",
-			"Authorization": "Bearer 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",
+			"Authorization": "Bearer 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",
 		},
 	};
 
