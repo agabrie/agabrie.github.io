@@ -109,6 +109,7 @@
 .project-image{
 	width:30rem;
 	max-height:18rem;
+	cursor: pointer;
 }
 .project-container{
 	display: flex;
