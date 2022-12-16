@@ -1,4 +1,5 @@
 let latest_date = "2022-12-14T08:49:35Z"
+let api_token = process.env.GITHUB_API_TOKEN;
 $(document).ready(async ()=>{
 	getLatestDeployment("portfolio").then((data)=>{
 		showLatestDeployment()
@@ -17,7 +18,7 @@ function getLatestDeployment(repository_name){
 		"timeout": 0,
 		"headers": {
 			"Accept": "application/vnd.github+json",
-			"Authorization": "Bearer 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",
+			"Authorization": `Bearer ${api_token}`,
 		},
 	};
 
