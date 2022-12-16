@@ -37,14 +37,14 @@ function generateProjects(){
 		project_thumbnail.append(project_img);
 		if(project.hasLiveView){
 			let live_btn = $(`<button id="btn-project-view" class="btn-view-live">live</button>`)
-			live_btn.attr("src",project.github_repository)
+			// live_btn.attr("src",project.github_repository)
 			live_btn.on("click",showEmbeddedPreview)
 			project_thumbnail.append(live_btn)
 		}
 
 		let project_details = $(`<div class="project-details"></div>`)
 		let project_name = $(`<a class="project-name" target="__blank"></a>`)
-		project_name.attr("href", project.deployed_url)
+		project_name.attr("href", project.github_repository)
 		project_name.text(project.project_name)
 		project_details.append(project_name)
 		
