@@ -1,37 +1,37 @@
-## Welcome to GitHub Pages
+# Portfolio Website
 
-You can use the [editor on GitHub](https://github.com/agabrie/agabrie.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Table Of Contents
+- [Table Of Contents](#table-of-contents)
+- [Description](#description)
+- [Live URL](#live-url)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Test](#test)
+- [Github](#github)
+- [Email](#email)
+## Description
+This is where I draft which content and styling I want to have on my professional portfolio website as well as features and layouts I would like to implement.
 
-### Markdown
+![screenshot of website](./assets/images/portfolio-screenshot.png)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Live URL
+Here is a link to the live webite: [Abduraghmaan's portfolio](https://agabrie.github.io/portfolio/)
 
-```markdown
-Syntax highlighted code block
+## Installation
+```N/A```
 
-# Header 1
-## Header 2
-### Header 3
+## Usage
+```N/A```
 
-- Bulleted
-- List
+## Test
+```N/A```
 
-1. Numbered
-2. List
+## Contributions
+```N/A```
 
-**Bold** and _Italic_ and `Code` text
+## Github
+https://github.com/agabrie
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/agabrie/agabrie.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Email
+abduraghmaangabriels2@gmail.com
