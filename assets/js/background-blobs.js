@@ -20,8 +20,10 @@ let colorRanges = [
 	{color:"red",low:355,high:360}, 
 	{color:"all",low:0,high:360}, 
 ]
-let btnDarkToggle = $("#hero")
+let btnDarkToggle = $("#dark-toggle")
+let toggleIcon = $("#dark-toggle .icon")
 $(document).ready(async ()=>{
+	renderDarkMode()
 	let colorRangeValue = getRandomInteger(0,colorRanges.length)
 	let colorRange = colorRanges[colorRangeValue]
 
@@ -32,12 +34,17 @@ $(document).ready(async ()=>{
 
 function toggleDarkMode(){
 	darkMode = !darkMode;
+	renderDarkMode();
+}
+function renderDarkMode(){
 	if(darkMode){
-		$("body").get(0).style.setProperty("--primary-text", "black");
-		$("body").get(0).style.setProperty("--primary", "white");
-	}else{
+		toggleIcon.text("☾")
 		$("body").get(0).style.setProperty("--primary-text", "white");
 		$("body").get(0).style.setProperty("--primary", "black");
+	}else{
+		toggleIcon.text("❂")
+		$("body").get(0).style.setProperty("--primary-text", "black");
+		$("body").get(0).style.setProperty("--primary", "white");
 	}
 }
 
@@ -63,7 +70,7 @@ function createBlob(x, y,size, colorRange) {
 	let rotation = getRandomInteger(0, 360);
 	
 	let backgroundColor = generateBackgroundColor("hsla", colorRange);
-	console.log(backgroundColor)
+	// console.log(backgroundColor)
 	let alpha = getRandomInteger(0, 4) / 10;
 	let anim_duration = getRandomInteger(3, 10);
 	blob_element.css({
