@@ -1,3 +1,12 @@
+:root{
+	--black:black;
+	--white:white;
+	--primary:var(--white);
+	--secondary:teal;
+
+	--primary-text:var(--black);
+	--secondary-text:var(--white);
+}
 h1{
 	font-size: 4em;
 }
@@ -17,16 +26,11 @@ html{
 	margin:0;
 	padding: 0;
 	font-size: 10px;
-	background-color: black;
-	color: white;
 }
 body{
 	margin: 0;
-	font-family: 'Rubik', sans-serif;
-}
-:root{
-	--black:black;
-	--white:white;
-	--primary:var(--white);
-	--secondary:teal;
+	font-family: 'Open Sans', sans-serif;
+	background-color: var(--primary);
+	color: var(--primary-text);
+	/* font-family: 'Rubik', sans-serif; */
 }
