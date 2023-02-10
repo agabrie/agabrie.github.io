@@ -21,54 +21,77 @@ let colorRanges = [
 	{color:"all",low:0,high:360}, 
 ]
 let btnDarkToggle = $("#dark-toggle")
-let toggleIcon = $("#dark-toggle .icon")
+let toggleIcon = $("#toggle-icon")
 $(document).ready(async ()=>{
 	renderDarkMode()
-	let colorRangeValue = getRandomInteger(0,colorRanges.length)
+	let colorRangeValue = getRandomInteger(0,colorRanges.length-1)
 	let colorRange = colorRanges[colorRangeValue]
-
 	await generateBlobs(colorRange);
-	moveBlobs();
+	// console.log(blobs)
+	setTimeout(async ()=>{
+		await moveBlobs();
+
+	}, 500)
+	setInterval(async()=>{
+		await moveBlobs();
+	},10000)
 	btnDarkToggle.on("click", toggleDarkMode)
+	setInterval(()=>{updateBlobColor()},getRandomInteger(5, 10)*1000)
 })
 
 function toggleDarkMode(){
 	darkMode = !darkMode;
-	renderDarkMode();
+	toggleIcon.toggleClass("fa-beat-fade").attr("style", "--fa-animation-duration: .5s;--fa-beat-fade-scale: 0;"/*"--fa-flip-x: 1; --fa-flip-y: -.35;"*/)
+	setTimeout(()=>{
+		renderDarkMode();
+	},250)
+	setTimeout(()=>{
+		toggleIcon.toggleClass("fa-beat-fade").attr("style","")
+	},500)
+	// updateBlobColor();
 }
 function renderDarkMode(){
+	
+	toggleIcon.toggleClass("fa-moon fa-sun")
+	// toggleIcon.toggle("fa-sun")
+	// toggleIcon.toggle("fa-sun",!darkMode)
 	if(darkMode){
-		toggleIcon.text("☾")
+		// toggleIcon.text("☾")
 		$("body").get(0).style.setProperty("--primary-text", "white");
 		$("body").get(0).style.setProperty("--primary", "black");
 	}else{
-		toggleIcon.text("❂")
+		// toggleIcon.text("❂")
 		$("body").get(0).style.setProperty("--primary-text", "black");
 		$("body").get(0).style.setProperty("--primary", "white");
 	}
 }
 
 function generateBlobs(colorRange) {
-	return new Promise((resolve, reject)=>{
-		let num_blobs = getRandomInteger(10, 30);
-		let floating_shapes = $("#floating-shapes");
-		for (let i = 0; i <= num_blobs; i++) {
+	// console.log(colorRange.color)
+	let promises = []
+	let num_blobs = getRandomInteger(10, 20);
+	let floating_shapes = $("#floating-shapes");
+	for (let i = 0; i <= num_blobs; i++) {
+		 promises.push(new Promise((resolve, reject)=>{
 			let x = getRandomInteger(0, 100) - 10;
 			let y = getRandomInteger(0, 100) - 10;
 			let size = getRandomInteger(5, 40);
 			let blob_element = createBlob(x, y, size, colorRange);
-			blobs.push({blob_element,x,y,size});
+			
+			let blob = {blob_element,x,y,size}
+			blobs.push(blob);
 			floating_shapes.append(blob_element);
-			if(i==num_blobs){
-				resolve();
-			}
-		}
-	})
+			// if(i==num_blobs){
+				resolve(blob);
+			// }
+		}))
+	}
+	return Promise.all(promises)
 }
 function createBlob(x, y,size, colorRange) {
 	let blob_element = $(`<div class="blob"></div>`);
 	let rotation = getRandomInteger(0, 360);
-	
+	let duration = getRandomInteger(5,10)
 	let backgroundColor = generateBackgroundColor("hsla", colorRange);
 	// console.log(backgroundColor)
 	let alpha = getRandomInteger(0, 4) / 10;
@@ -80,10 +103,21 @@ function createBlob(x, y,size, colorRange) {
 		transform : `rotate(${rotation}deg)`,
 		boxShadow : `1px 1px 10px rgb(0 0 0 / ${alpha})`,
 		backgroundColor : backgroundColor,
+		transition:`transform ${duration}s ease-in-out,background-color ${duration}s ease-in-out, top ${duration}s ease-in-out, left ${duration}s ease-in-out, width ${duration}s ease-in-out`,
 		animation : `contort ${anim_duration}s linear -${getRandomInteger(0,anim_duration)}s infinite alternate`,
 	})
 	
 	return blob_element;
+}
+function updateBlobColor(){
+	let colorRangeValue = getRandomInteger(0,colorRanges.length-1)
+	let colorRange = colorRanges[colorRangeValue]
+	blobs.forEach((blob)=>{
+		// console.log(blob)
+		let blobEl = blob.blob_element; 
+		let backgroundColor = generateBackgroundColor("hsla", colorRange)
+		blobEl.css({backgroundColor:backgroundColor})
+	})
 }
 function generateBackgroundColor(algorithm = "rgba", colorRange=null){
 	if(algorithm == "rgba"){
@@ -109,16 +143,26 @@ function generateBackgroundColor(algorithm = "rgba", colorRange=null){
 function moveBlobs(){
 	let promises = []
 	blobs.forEach(({blob_element,x,y,size}) => {
-			blob_element.velocity(
-			{
-				top:`${getRandomInteger(0,100 )-10}%`,
-				left:`${getRandomInteger(0, 100)-10}%`,
-				width:`${getRandomInteger(5,40)}em`
-			},
-			{
-				duration:getRandomInteger(5000,10000),
-				loop: true
-			})
+		promises.push( new Promise((resolve, reject) => {
+			let rotation = getRandomInteger(0, 360);
+			let movementconfig = {
+				transform : `rotate(${rotation}deg)`,
+				top:`${getRandomInteger(10,100 )-10}%`,
+				left:`${getRandomInteger(10, 100)-10}%`,
+				width:`${getRandomInteger(5,40)}em`,
+			}
+			let	timingconfig = {
+				easing:"easeInOut",
+				// duration:5000,
+				duration:getRandomInteger(5,10)*1000,
+				// loop: true,
+				queue:false,
+			}
+			blob_element.css(movementconfig)
+			// console.log(movementconfig, timingconfig)
+			// blob_element.velocity(movementconfig,timingconfig)
+			resolve(blob_element)
+		}))
 	});
 	return Promise.all(promises)
 }
