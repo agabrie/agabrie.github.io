@@ -4,12 +4,10 @@
 		<link rel="stylesheet" href="assets/css/styles.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,600;1,900&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;300&display=swap" rel="stylesheet">
+		<!-- <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,600;1,900&display=swap" rel="stylesheet"> -->
+		<!-- <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;300&display=swap" rel="stylesheet"> -->
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
-		<!-- <script src="https://code.jquery.com/jquery-3.6.2.slim.js" integrity="sha256-OflJKW8Z8amEUuCaflBZJ4GOg4+JnNh9JdVfoV+6biw=" crossorigin="anonymous"></script> -->
 		<script src="https://code.jquery.com/jquery-3.6.2.js" integrity="sha256-pkn2CUZmheSeyssYw3vMp1+xyub4m+e+QK4sQskvuo4=" crossorigin="anonymous"></script>
-		<script src="./assets/js/velocity.min.js" ></script>
 		<script src="https://kit.fontawesome.com/57ac37f23c.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
@@ -17,11 +15,35 @@
 		<header class="header">
 			<nav class="navigation-bar">
 				<div  class="hero">
-					<div  id="dark-toggle"class="icon">
-						<i id="toggle-icon" class="fa-solid fa-sun"></i>
+					<div   class="icon">
+						<i id="icon-menu" class="fa-solid fa-gear"></i>
 					</div>
-					
 					<p class="hero-name">Abduraghmaan Gabriels</p>
+					<div class="config-container close-menu" id="config-container">
+						<ul id="config-menu" class="config-menu">
+							<div id="config-toggle-dark" class="config-item">
+								<p>Toggle Dark Mode</p>
+								<div class="icon">
+									<i id="icon-dark-mode" class="fa-solid fa-sun"></i>
+								</div>
+							</div>
+							<div id="config-toggle-color" class="config-item">
+								<p>Toggle theme update</p>
+								<div id="icon-auto-theme"class="icon fa-stack fa-2x">
+									<i class="fa-solid fa-stack-2x fa-dice"></i>
+									<i class="fa-solid fa-lock fa-stack-2x unban"></i>
+								</div>
+							</div>
+							<div id="config-toggle-motion" class="config-item">
+								<p>Toggle BG Motion<p>
+								<div id="icon-motion" class="icon fa-stack fa-2x">
+									<i class="fa-solid fa-stack-2x fa-arrows-up-down-left-right"></i>
+									<i class="fa-solid fa-lock fa-stack-2x unban"></i>
+								</div>
+									
+							</div>
+						</ul>
+					</div>
 				</div>
 				<div class="nav-links">
 					<a class="nav-item" href="#about-me">About me</a>
@@ -48,27 +70,12 @@
 				<div class="section-header"><h2>Projects</h2></div>
 				<div id="project-section" class="section-content">
 					<embed id="project-preview" class="embed-preview" hidden/>
-					<!-- <div  class="project-container">
-						<div class="project-thumbnail">
-							<img class="project-image" src="assets/images/portfolio-screenshot.png">
-							<button id="btn-project-view" class="btn-view-live">live</button>
-						</div>
-						<div class="project-details">
-							<a class="project-name" href="https://agabrie.github.io/portfolio/" target="__blank">Portfolio</a>
-							<p class="project-description">This is my first attempt at making a portfolio<p>
-						</div>
-					</div> -->
 				</div>
 			</section>
 			<section id="skills" class="section-container">
 				<div class="section-header"><h2>Skills</h2></div>
 				<div class="section-content">
-					<ul id="skill-section" class="skills">
-						<!-- <li class="skill-container"><p>Problem solving</p><div class="proficiency">★★★★★</div></li> -->
-						<!-- <li class="skill-container"><p>API Development</p><div class="proficiency">★★☆☆☆</div></li> -->
-						<!-- <li class="skill-container"><p>Content Management Systems</p><div class="proficiency">★★☆☆☆</div></li> -->
-						<!-- <li class="skill-container"><p>UX/UI Design</p><div class="proficiency">★★☆☆☆</div></li> -->
-					</ul>
+					<ul id="skill-section" class="skills"></ul>
 				</div>
 			</section>
 			<section id="contact" class="section-container">
@@ -83,6 +90,4 @@
 		</footer>
 	</body>
 	<script type="module" src="assets/js/index.js"></script>
-	<script type="application/javascript" src="assets/js/background-blobs.js"></script>
-	<script type="application/javascript" src="assets/js/deployment-date.js"></script>
 </html>

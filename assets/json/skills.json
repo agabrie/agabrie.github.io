@@ -1,6 +1,6 @@
 [
-	{"description":"Problem solving", "proficiency":5},
-	{"description":"API Development", "proficiency":2},
-	{"description":"Content Management Systems", "proficiency":2},
-	{"description":"UX/UI Design", "proficiency":3}
+  { "description": "Problem solving", "proficiency": 5 },
+  { "description": "API Development", "proficiency": 2 },
+  { "description": "Content Management Systems", "proficiency": 2 },
+  { "description": "UX/UI Design", "proficiency": 3 }
 ]

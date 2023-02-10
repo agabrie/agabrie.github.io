@@ -6,8 +6,8 @@ $(document).ready(async ()=>{
 })
 
 function showLatestDeployment(){
-	let dateContainer = $("#last-date");
-	dateContainer.text(new Date(latest_date).toLocaleDateString("en-ZA", { year: "numeric", month: "long", day: "numeric" }));
+	let $dateContainer = $("#last-date");
+	$dateContainer.text(new Date(latest_date).toLocaleDateString("en-ZA", { year: "numeric", month: "long", day: "numeric" }));
 }
 
 function getLatestDeployment(repository_name){

@@ -4,8 +4,29 @@
 	--primary:var(--white);
 	--secondary:teal;
 
+	--red:255, 0, 0;
+	--red-orange:255, 56, 0;	
+	--orange:255,127,0;
+	--orange-yellow:255, 191, 0;
+	--yellow:255, 255, 0;
+	--yellow-green:209, 226, 49;
+	--green:3, 192, 60;
+	--green-cyan:0, 204, 153;
+	--cyan:0, 255, 255;
+	--cyan-blue:100, 149, 237;
+	--blue:0, 0, 255;
+	--blue-magenta:150, 111, 214;
+	--magenta:255, 0, 255;
+	--magenta-pink:255, 0, 127;
+	--pink:255,	192, 203;
+	--pink-red:229, 43, 80;
+	--all:var(--cyan-blue);
+
 	--primary-text:var(--black);
 	--secondary-text:var(--white);
+
+	--primary-theme-color:var(--cyan-blue);
+	--secondary-theme-color:var(--primary-text);
 }
 h1{
 	font-size: 4em;

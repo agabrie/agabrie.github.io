@@ -1,0 +1,20 @@
+[
+  { "color": "red", "low": 0, "high": 10 },
+  { "color": "red-orange", "low": 10, "high": 20 },
+  { "color": "orange", "low": 20, "high": 40 },
+  { "color": "orange-yellow", "low": 40, "high": 50 },
+  { "color": "yellow", "low": 50, "high": 60 },
+  { "color": "yellow-green", "low": 60, "high": 80 },
+  { "color": "green", "low": 80, "high": 140 },
+  { "color": "green-cyan", "low": 140, "high": 170 },
+  { "color": "cyan", "low": 170, "high": 200 },
+  { "color": "cyan-blue", "low": 200, "high": 220 },
+  { "color": "blue", "low": 220, "high": 240 },
+  { "color": "blue-magenta", "low": 240, "high": 280 },
+  { "color": "magenta", "low": 280, "high": 320 },
+  { "color": "magenta-pink", "low": 320, "high": 330 },
+  { "color": "pink", "low": 330, "high": 345 },
+  { "color": "pink-red", "low": 345, "high": 355 },
+  { "color": "red", "low": 355, "high": 360 },
+  { "color": "all", "low": 0, "high": 360 }
+]
