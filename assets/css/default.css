@@ -1,9 +1,8 @@
 :root{
 	--black:black;
 	--white:white;
-	--primary:var(--white);
 	--secondary:teal;
-
+	
 	--red:255, 0, 0;
 	--red-orange:255, 56, 0;	
 	--orange:255,127,0;
@@ -24,7 +23,13 @@
 
 	--primary-text:var(--black);
 	--secondary-text:var(--white);
-
+	
+	/* --primary-bg:var(--black); */
+	/* --secondary-bg:var(--white); */
+	--bg-black: 0,0,0;
+	--bg-white: 255,255,255;
+	--primary-bg:var(--bg-white);
+	--secondary-bg:var(--bg-black);
 	--primary-theme-color:var(--cyan-blue);
 	--secondary-theme-color:var(--primary-text);
 }
@@ -51,7 +56,7 @@ html{
 body{
 	margin: 0;
 	font-family: 'Open Sans', sans-serif;
-	background-color: var(--primary);
+	background-color: rgb(var(--primary-bg));
 	color: var(--primary-text);
 	transition: color .5s ease-in-out, background-color .5s ease-in-out;
 
