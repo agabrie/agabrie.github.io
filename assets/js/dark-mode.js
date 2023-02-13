@@ -40,11 +40,11 @@ function renderDarkMode(){
 	
 	$darkModeIcon.children('i').toggleClass("fa-moon fa-sun")
 	if(darkMode){
-		$("body").get(0).style.setProperty("--primary-text", "white");
+		$("body").get(0).style.setProperty("--primary-text", "var(--white)");
 		$("body").get(0).style.setProperty("--primary-bg", `var(--bg-black)`);
 		$("body").get(0).style.setProperty("--secondary-bg", `var(--bg-white)`);
 	}else{
-		$("body").get(0).style.setProperty("--primary-text", "black");
+		$("body").get(0).style.setProperty("--primary-text", "var(--black)");
 		$("body").get(0).style.setProperty("--primary-bg", `var(--bg-white)`);
 		$("body").get(0).style.setProperty("--secondary-bg", `var(--bg-black)`);
 	}
