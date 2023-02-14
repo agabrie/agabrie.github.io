@@ -1,7 +1,10 @@
 
 let $configMenu = $("#config-container")
 let $configIcon = $("#icon-menu")
-let openMenu = false;
+let $navIcon = $("#icon-nav")
+let $navLinks = $("#nav-links")
+let openConfigMenu = false;
+let openNavMenu = false;
 
 let $btnDarkToggle = $("#config-toggle-dark")
 let $darkModeIcon = $("#icon-dark-mode")
@@ -9,20 +12,47 @@ let darkMode = true;
 
 $(document).ready(async()=>{
     renderDarkMode()
-    $configIcon.on("click", toggleConfigMenu)
+    if(window.innerWidth < 768){
+        $navLinks.toggleClass("close-menu")
+    }
+    $navIcon.on("click", ()=>{
+        toggleNavBar()
+        if(openConfigMenu){
+            toggleConfigMenu();
+        }
+    })
+    $configIcon.on("click", ()=>{
+        toggleConfigMenu()
+        if(openNavMenu){
+            toggleNavBar();
+        }
+    })
     $btnDarkToggle.on("click", toggleDarkMode)
 })
-
+function toggleNavBar(){
+    openNavMenu = !openNavMenu;
+    
+    $navIcon.toggleClass("fa-beat-fade").attr("style", "--fa-animation-duration: .5s;--fa-beat-fade-scale: 0;")
+    $navIcon.toggleClass("fa-xmark fa-bars")
+        $navLinks.toggleClass("close-menu")
+	// },250)
+	setTimeout(()=>{
+		$navIcon.toggleClass("fa-beat-fade").attr("style","")
+	},250)
+    
+}
 function toggleConfigMenu(){
-    openMenu = !openMenu;
+    openConfigMenu = !openConfigMenu;
+    
     $configIcon.toggleClass("fa-beat-fade").attr("style", "--fa-animation-duration: .5s;--fa-beat-fade-scale: 0;"/*"--fa-flip-x: 1; --fa-flip-y: -.35;"*/)
 	// setTimeout(()=>{
-        $configIcon.toggleClass("fa-bars fa-gear")
+        $configIcon.toggleClass("fa-xmark fa-gear")
         $configMenu.toggleClass("close-menu")
 	// },250)
 	setTimeout(()=>{
 		$configIcon.toggleClass("fa-beat-fade").attr("style","")
 	},250)
+
 }
 
 

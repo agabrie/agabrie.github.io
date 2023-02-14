@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="assets/css/styles.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- <link rel="stylesheet" href="assets/css/styles.css"  /> -->
+		<link rel="preload" href="assets/css/styles.css" as="style">
+		<link rel="stylesheet" href="assets/css/styles.css" media="print" onload="this.media='all'">
+
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<!-- <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,600;1,900&display=swap" rel="stylesheet"> -->
@@ -45,7 +49,10 @@
 						</ul>
 					</div>
 				</div>
-				<div class="nav-links">
+				<div class="icon nav-icon" >
+					<i id="icon-nav" class="fa-solid fa-bars"></i>
+				</div>
+				<div id="nav-links" class="nav-links">
 					<a class="nav-item" href="#about-me">About me</a>
 					<a class="nav-item" href="#projects">Projects</a>
 					<a class="nav-item" href="#skills">Skills</a>
@@ -54,29 +61,28 @@
 			</nav>
 		</header>
 		<main class="site-content">
+			
 			<section id="about-me" class="section-container">
 				<div class="section-header"><h2>About Me</h2></div>
-				<div class="section-content">
+				<div id="about-section" class="section-content">
 					<h4>I'm a 24 year-old <span class="job-description">Full-Stack Web Developer</span> from Cape Town, South Africa.</h4>
-					<p>I started out my journey making mods and hacks for pokemon games when i was 8 years old. I learned how scripts worked and instantly fell inlove with the ability to build things from ny imagination using a few simple rules.</p>
-					<p>That got me started on my path to programming and game development. Over the years my passion for software development as a whole has grown immensely.</p>
-					<p>I've worked on a wide variety of projects spanning multiple tech stacks and programming languages. Be it developing algorithms and assemblers in C, game development in Unity, a bulk file renaming tool for windows or dating websites using NodeJS.</p>
-					<p>What makes me a talented individual is my motivation and passion to learn new things, no matter how daunting it may be, and the ability to take any problem, break it down to its core concepts and then solve each of its components individually but within an very shirt amount of time.</p>
-					<p>I may be young but I'm extremely experienced for someone of my age.</p>
 				</div>
 			</section>
+
 			<section id="projects" class="section-container">
 				<div class="section-header"><h2>Projects</h2></div>
 				<div id="project-section" class="section-content">
 					<embed id="project-preview" class="embed-preview" hidden/>
 				</div>
 			</section>
+			
 			<section id="skills" class="section-container">
 				<div class="section-header"><h2>Skills</h2></div>
 				<div class="section-content">
 					<ul id="skill-section" class="skills"></ul>
 				</div>
 			</section>
+			
 			<section id="contact" class="section-container">
 				<div class="section-header"><h2>Contact</h2></div>
 				<div class="section-content">

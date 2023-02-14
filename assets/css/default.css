@@ -32,6 +32,24 @@
 	--secondary-bg:var(--bg-black);
 	--primary-theme-color:var(--cyan-blue);
 	--secondary-theme-color:var(--primary-text);
+
+
+	--header-height:10rem;
+	--footer-height:8rem;
+}
+html{
+	margin:0;
+	padding: 0;
+	font-size: 10px;
+}
+body{
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	background-color: rgb(var(--primary-bg));
+	color: var(--primary-text);
+	transition: color .5s ease-in-out, background-color .5s ease-in-out;
+
+	/* font-family: 'Rubik', sans-serif; */
 }
 h1{
 	font-size: 4em;
@@ -48,17 +66,5 @@ h4{
 p{
 	font-size: 1.5rem;
 }
-html{
-	margin:0;
-	padding: 0;
-	font-size: 10px;
-}
-body{
-	margin: 0;
-	font-family: 'Open Sans', sans-serif;
-	background-color: rgb(var(--primary-bg));
-	color: var(--primary-text);
-	transition: color .5s ease-in-out, background-color .5s ease-in-out;
 
-	/* font-family: 'Rubik', sans-serif; */
-}
+
