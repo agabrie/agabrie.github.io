@@ -54,7 +54,12 @@ const initiateBlobColorUpdate = async () => {
 
 const generateBlobs = (colorRange) => {
   let promises = [];
-  let num_blobs = getRandomInteger(10, 20);
+  let num_blobs = 10;
+  if(window.innerWidth < 768){
+	  num_blobs = getRandomInteger(5, 10);
+  }else{
+	num_blobs = getRandomInteger(10, 20);
+  }
   let $floating_shapes = $("#floating-shapes");
   for (let i = 0; i <= num_blobs; i++) {
     promises.push(
