@@ -297,6 +297,9 @@
 		flex-direction: column;
 		height: auto;
 	}
+	.config-container{
+		background: rgba(var(--primary-bg),70%);
+	}
 	.nav-links{
 		position: absolute;
 		height: auto;
@@ -309,7 +312,7 @@
 		max-width: 20rem;
 		transition: max-height 0.5s ease-in-out;
 		overflow: hidden;
-		background: rgba(var(--primary-bg),50%);
+		background: rgba(var(--primary-bg),70%);
 		box-shadow: 1px 1px 1rem rgb(0 0 0 / 40%);
 		flex-direction: column;
 	}
