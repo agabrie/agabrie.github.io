@@ -16,7 +16,7 @@ const showEmbeddedPreview=()=>{
 
 const renderProjects = ()=>{
 	projects.forEach((project)=>{
-		let $project_container = $(`<div class="project-container"></div>`)
+		let $project_container = $(`<article class="project-container"></article>`)
 		$project_container.attr('id',project.project_id)
 		let $project_thumbnail = $(`<div class="project-thumbnail"></div>`)
 		let $project_img = $(`<img class="project-image">`)

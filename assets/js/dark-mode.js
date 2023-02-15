@@ -29,7 +29,7 @@ $(document).ready(async()=>{
     })
     $btnDarkToggle.on("click", toggleDarkMode)
 })
-function toggleNavBar(){
+const toggleNavBar=()=>{
     openNavMenu = !openNavMenu;
     
     $navIcon.toggleClass("fa-beat-fade").attr("style", "--fa-animation-duration: .5s;--fa-beat-fade-scale: 0;")
@@ -41,7 +41,7 @@ function toggleNavBar(){
 	},250)
     
 }
-function toggleConfigMenu(){
+const toggleConfigMenu = ()=>{
     openConfigMenu = !openConfigMenu;
     
     $configIcon.toggleClass("fa-beat-fade").attr("style", "--fa-animation-duration: .5s;--fa-beat-fade-scale: 0;"/*"--fa-flip-x: 1; --fa-flip-y: -.35;"*/)
@@ -56,7 +56,7 @@ function toggleConfigMenu(){
 }
 
 
-function toggleDarkMode(){
+const toggleDarkMode=()=>{
 	darkMode = !darkMode;
 	$darkModeIcon.toggleClass("fa-beat-fade").attr("style", "--fa-animation-duration: .5s;--fa-beat-fade-scale: 0;"/*"--fa-flip-x: 1; --fa-flip-y: -.35;"*/)
 	setTimeout(()=>{
@@ -66,7 +66,7 @@ function toggleDarkMode(){
 		$darkModeIcon.toggleClass("fa-beat-fade").attr("style","")
 	},500)
 }
-function renderDarkMode(){
+const renderDarkMode =()=>{
 	
 	$darkModeIcon.children('i').toggleClass("fa-moon fa-sun")
 	if(darkMode){

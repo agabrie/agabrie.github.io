@@ -1,6 +1,14 @@
-[
-  { "description": "Problem solving", "proficiency": 5 },
-  { "description": "API Development", "proficiency": 2 },
-  { "description": "Content Management Systems", "proficiency": 2 },
-  { "description": "UX/UI Design", "proficiency": 3 }
-]
+{
+    "soft_skills":[
+        { "description": "Problem solving", "proficiency": 5 },
+        { "description": "API Development", "proficiency": 4 },
+        { "description": "Content Management Systems", "proficiency": 4 },
+        { "description": "UX/UI Design", "proficiency": 4 }
+    ], "technical_skills":[
+        { "description": "Problem solving", "proficiency": 5 },
+        { "description": "API Development", "proficiency": 4 },
+        { "description": "Content Management Systems", "proficiency": 4 },
+        { "description": "UX/UI Design", "proficiency": 4 }
+    ]
+
+}
