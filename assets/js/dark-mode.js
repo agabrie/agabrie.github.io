@@ -12,9 +12,9 @@ let darkMode = true;
 
 $(document).ready(async()=>{
     renderDarkMode()
-    // if(window.innerWidth > 768){
-        // $navLinks.toggleClass("close-menu")
-    // }
+    if(window.innerWidth > 768){
+        $navLinks.toggleClass("close-menu")
+    }
     $navIcon.on("click", ()=>{
         toggleNavBar()
         if(openConfigMenu){

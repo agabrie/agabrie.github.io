@@ -36,6 +36,8 @@
 
 	--header-height:10rem;
 	--footer-height:8rem;
+
+	--hover-transition: background-color .2s ease-in-out;
 }
 html{
 	margin:0;
@@ -50,6 +52,9 @@ body{
 	transition: color .5s ease-in-out, background-color .5s ease-in-out;
 
 	/* font-family: 'Rubik', sans-serif; */
+}
+p, h1, h2, h3, h4, a, li, div{
+	text-shadow: 1px 1px 4px rgba(var(--black), 100%);
 }
 h1{
 	font-size: 4em;
