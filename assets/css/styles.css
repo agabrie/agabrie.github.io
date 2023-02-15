@@ -155,7 +155,7 @@
 }
 .skill-container:hover{
 	/* color:rgba(red, green, blue, alpha); */
-	background-color:   rgba(var(--secondary-bg), 20%);
+	background-color:   rgba(var(--primary-bg), 20%);
 
 }
 .proficiency{
@@ -261,7 +261,18 @@
 	height: calc(100vh - var(--header-height) - var(--footer-height));
 	height: calc(var(--vh, 1vh) * 100 - var(--header-height) - var(--footer-height));
 }
+.skills{
+	padding: 0;
+	margin: 0;
+}
 
+.skills-container{
+	padding: 2rem;
+}
+.skills-container:hover{
+	background-color:   rgba(var(--secondary-bg), 20%);
+
+}
 ::-webkit-scrollbar {
 	width: 1rem;
 	position: absolute;
@@ -330,10 +341,8 @@
 		right:1rem;
 		display: block;
 	}
-	.skills{
-		padding: 0;
-	}
 }
+
 
 .close-menu{
 	max-height: 0;

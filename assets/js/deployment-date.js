@@ -5,12 +5,12 @@ $(document).ready(async ()=>{
 	})
 })
 
-function showLatestDeployment(){
+const showLatestDeployment=()=>{
 	let $dateContainer = $("#last-date");
 	$dateContainer.text(new Date(latest_date).toLocaleDateString("en-ZA", { year: "numeric", month: "long", day: "numeric" }));
 }
 
-function getLatestDeployment(repository_name){
+const getLatestDeployment=(repository_name)=>{
 	var settings = {
 		"url": `https://agabrie-github-deployment-api.onrender.com/api/deployment/latest/${repository_name}`,
 		"method": "GET",
@@ -18,10 +18,10 @@ function getLatestDeployment(repository_name){
 	};
 
 	return $.ajax(settings)
-	.done(response=>response)
-	.then(result => {
+	.done((response)=>response)
+	.then((result) => {
 		latest_date = result.updated_at;
 		return result
 	})
-	.catch(error => console.log('error', error));
+	.catch((error) => console.log('error', error));
 }
