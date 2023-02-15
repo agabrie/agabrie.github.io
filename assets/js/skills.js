@@ -1,12 +1,14 @@
 import skills from "../json/skills.json" assert {type: 'json'}
-let $skillSection = $("#skill-section");
+let $softSkillSection = $("#soft-skill-section");
+let $techSkillSection = $("#tech-skill-section");
 
 $(document).ready(()=>{
-	renderSkills()
+	renderSkills(skills.technical_skills, $techSkillSection)
+	renderSkills(skills.soft_skills, $softSkillSection)
 })
 
-const renderSkills=()=>{
-	skills.forEach((skill)=>{
+const renderSkills=(skillsArray, $section)=>{
+	skillsArray.forEach((skill)=>{
 		let $skillContainer = $(`<li class="skill-container"></li>`)
 		let $skillDescription = $(`<p>Problem solving</p>`)
 		let $skillProficiencyContainer = $(`<div class="proficiency"></div>`)
@@ -21,6 +23,6 @@ const renderSkills=()=>{
 		$skillContainer.append($skillDescription)
 		$skillContainer.append($skillProficiencyContainer)
 
-		$skillSection.append($skillContainer)
+		$section.append($skillContainer)
 	})
 }
