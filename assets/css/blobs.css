@@ -21,7 +21,7 @@
 	height: 100%;
 	z-index: -1;
 
-	background: linear-gradient(135deg, rgba(255, 255, 255, .2), rgba(0, 0, 0, .2));
+	/* background: linear-gradient(135deg, rgba(255, 255, 255, .2), rgba(0, 0, 0, .2)); */
 }
 
 .floating-shapes .blob{

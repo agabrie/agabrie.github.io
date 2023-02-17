@@ -1,0 +1,23 @@
+.ripple{
+    border-radius: 50%;
+    width: 1rem;
+    aspect-ratio: 1;
+    position: absolute;
+    /* background-color: white; */
+    /* border: 1px solid red; */
+    animation: ripple 3s ease-in-out;
+    box-shadow: inset 0px 0px 10px rgba(var(--primary-theme-color), 100%); 
+transition: background-color 5s ease-in-out;
+
+}
+
+@keyframes ripple{
+    0%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(20);
+    }
+}

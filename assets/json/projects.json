@@ -2,10 +2,20 @@
   {
     "project_name": "Portfolio",
     "project_id": "p001",
-    "project_thumbnail": "assets/images/portfolio-screenshot.png",
-    "hasLiveView": true,
+    "project_thumbnail": "assets/images/projects/portfolio-screenshot.png",
+    "hasLiveView": false,
     "github_repository": "https://github.com/agabrie/portfolio",
     "deployed_url": "https://agabrie.github.io/portfolio/",
     "project_description": "This is my first attempt at making a portfolio"
+  },
+  
+  {
+    "project_name": "Tree-Map Creation",
+    "project_id": "p003",
+    "project_thumbnail": "assets/images/projects/tree-generation.png",
+    "hasLiveView": false,
+    "github_repository": "https://github.com/agabrie/tree-map-creation",
+    "deployed_url": "https://agabrie.github.io/tree-map-creation/",
+    "project_description": "A map generation tool for simulating Binary Search, BFS, A*/Dijkstra pathfinding and similar algorithms"
   }
 ]

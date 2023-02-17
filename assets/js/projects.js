@@ -26,7 +26,7 @@ const renderProjects = ()=>{
 		$project_img.attr("src",project.project_thumbnail)
 		$project_thumbnail.append($project_img);
 		if(project.hasLiveView){
-			let $live_btn = $(`<button id="btn-project-view" class="btn-view-live">live</button>`)
+			let $live_btn = $(`<button id="btn-project-view" class="btn btn-view-live">live</button>`)
 			// live_btn.attr("src",project.github_repository)
 			$live_btn.on("click",showEmbeddedPreview)
 			$project_thumbnail.append($live_btn)

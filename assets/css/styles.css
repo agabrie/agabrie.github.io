@@ -1,5 +1,6 @@
 @import "default.css";
 @import "blobs.css";
+@import "ripple.css";
 
 
 /* Navigation Styling */
@@ -70,7 +71,7 @@
 	display: none;
 }
 .nav-item:hover{
-	background-color:   rgba(var(--secondary-bg), 20%);
+	background-color:   rgba(var(--primary-theme-color), 20%);
 }
 
 /* General Section Styling */
@@ -128,7 +129,7 @@
 	transition: var(--hover-transition);
 }
 .project-container:hover{
-	background-color:   rgba(var(--secondary-bg), 20%);
+	background-color:   rgba(var(--primary-theme-color), 20%);
 }
 .project-thumbnail{
 	position: relative;
@@ -178,17 +179,24 @@
 	height: var(--footer-height);
 }
 
-
+.btn{
+	padding: .5rem 1rem;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: color .5s ease-in-out, background-color 5s ease-in-out;
+}
+.btn{
+	cursor: not-allowed;
+}
 .btn-view-live{
 	position: absolute;
 	bottom:1rem;
 	right:1rem;
-	padding: 1rem;
-	border: none;
-	border-radius: 4px;
+	/* padding: 1rem; */
+	/* border-radius: 4px; */
 	color: var(--primary-text);
 	background-color: rgba(var(--primary-theme-color),75%);
-	transition: color .5s ease-in-out, background-color 5s ease-in-out;
 }
 .btn-view-live:hover{
 	transition: color .5s ease-in-out, var(--hover-transition);
@@ -227,7 +235,7 @@
 	transition: var(--hover-transition);
 }
 .config-item:hover{
-	background-color:   rgba(var(--secondary-bg), 20%);
+	background-color:   rgba(var(--primary-theme-color), 20%);
 }
 
 .config-item p{
@@ -269,7 +277,7 @@
 	transition: var(--hover-transition);
 }
 .skills-container:hover{
-	background-color:   rgba(var(--secondary-bg), 20%);
+	background-color:   rgba(var(--primary-theme-color), 20%);
 
 }
 ::-webkit-scrollbar {
