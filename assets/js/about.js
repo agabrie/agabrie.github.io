@@ -6,7 +6,8 @@ $(document).ready(()=>{
 })
 
 const renderAbout = ()=>{
-	about_items.forEach((about)=>{
+	let random  = Math.floor(Math.random()*about_items.length);
+	about_items[random].forEach((about)=>{
 		// let $project_details = $(`<div class="project-details"></div>`)
 		let $p = $("<p></p>")
 		$p.text(about)

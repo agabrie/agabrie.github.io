@@ -8,7 +8,7 @@ $(document).ready(()=>{
 })
 
 const renderSkills=(skillsArray, $section)=>{
-	skillsArray.forEach((skill)=>{
+	skillsArray.sort((s1, s2)=>s2.proficiency-s1.proficiency).forEach((skill)=>{
 		let $skillContainer = $(`<li class="skill-container"></li>`)
 		let $skillDescription = $(`<p>Problem solving</p>`)
 		let $skillProficiencyContainer = $(`<div class="proficiency"></div>`)

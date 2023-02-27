@@ -1,14 +1,36 @@
 {
     "soft_skills":[
         { "description": "Problem solving", "proficiency": 5 },
+        { "description": "Tutoring", "proficiency": 5 },
         { "description": "API Development", "proficiency": 4 },
         { "description": "Content Management Systems", "proficiency": 4 },
-        { "description": "UX/UI Design", "proficiency": 4 }
+        { "description": "UX/UI Design", "proficiency": 4 },
+        { "description": "Algorithm Development", "proficiency": 4 },
+        { "description": "Back-End Development", "proficiency": 5 },
+        { "description": "Front-End Development", "proficiency": 5 },
+        { "description": "Database Design", "proficiency": 5 },
+        { "description": "Web Application Development", "proficiency": 5 },
+        { "description": "Mobile Application Development", "proficiency": 4 },
+        { "description": "Progressive Web-Application Development", "proficiency": 4 }
     ], "technical_skills":[
-        { "description": "Problem solving", "proficiency": 5 },
-        { "description": "API Development", "proficiency": 4 },
-        { "description": "Content Management Systems", "proficiency": 4 },
-        { "description": "UX/UI Design", "proficiency": 4 }
+        { "description": "C", "proficiency": 5 },
+        { "description": "C++", "proficiency": 5 },
+        { "description": "Javascript", "proficiency": 5 },
+        { "description": "Node.JS", "proficiency": 5 },
+        { "description": "PHP", "proficiency": 5 },
+        { "description": "C#", "proficiency": 4 },
+        { "description": "Java", "proficiency": 4 },
+        { "description": "Typescript", "proficiency": 4 },
+        { "description": "CSS", "proficiency": 5 },
+        { "description": "HTML", "proficiency": 5 },
+        { "description": "SQL", "proficiency": 4 },
+        { "description": "MongoDB", "proficiency": 5 },
+        { "description": "Vue.js", "proficiency": 5 },
+        { "description": "ReactJS", "proficiency": 4 },
+        { "description": "GraphQL", "proficiency": 4 },
+        { "description": "Firebase", "proficiency": 4 },
+        { "description": "Laravel", "proficiency" : 5 },
+        { "description": "JQuery", "proficiency" : 5 },
+        { "description": "Azure Functions", "proficiency" : 4 }
     ]
-
 }
