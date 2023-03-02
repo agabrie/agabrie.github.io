@@ -13,7 +13,7 @@
         { "description": "Mobile Application Development", "proficiency": 4 },
         { "description": "Progressive Web-Application Development", "proficiency": 4 }
     ], "technical_skills":[
-        { "description": "C", "proficiency": 5 },
+        { "description": "C", "proficiency": 5 , "logo":"https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg"},
         { "description": "C++", "proficiency": 5 },
         { "description": "Javascript", "proficiency": 5 },
         { "description": "Node.JS", "proficiency": 5 },

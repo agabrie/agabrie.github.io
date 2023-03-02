@@ -34,7 +34,10 @@ const renderProjects = ()=>{
 
 		let $project_details = $(`<div class="project-details"></div>`)
 		let $project_name = $(`<a class="project-name" target="__blank"></a>`)
-		$project_name.attr("href", project.github_repository)
+		if(project.github_repository){
+			$project_name.attr("href", project.github_repository)
+			$project_details.append($(`<i class="fa-brands fa-github"></i>`))
+		}
 		$project_name.text(project.project_name)
 		$project_details.append($project_name)
 		
@@ -45,6 +48,18 @@ const renderProjects = ()=>{
 		$project_container.append($project_thumbnail)
 		$project_container.append($project_details)
 		$projectSection.append($project_container)
+		$project_container.on("click",()=>{displayModal(project)})
 	})
 }
 
+const displayModal=(data)=>{
+		let $modal = $("#modal")
+		$modal.show("slow")
+
+		let $modalBG = $(`<div class="modal-bg"></div>`)
+		$modal.append($modalBG)
+		let $modalContent = $(`<div class="modal-content"></div>`)
+		$modalBG.append($modalContent)
+		// $modalBG.text("Hi")
+		// $("body").append($modalBG)
+}

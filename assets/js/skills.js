@@ -11,6 +11,12 @@ const renderSkills=(skillsArray, $section)=>{
 	skillsArray.sort((s1, s2)=>s2.proficiency-s1.proficiency).forEach((skill)=>{
 		let $skillContainer = $(`<li class="skill-container"></li>`)
 		let $skillDescription = $(`<p>Problem solving</p>`)
+		// let $skillLogo = $(`<img class="skill-logo" />`)
+		// if(skill.logo){
+		// 	$skillLogo.attr("alt", skill.description)
+		// 	$skillLogo.attr("src", skill.logo)
+		// 	$skillContainer.append($skillLogo)
+		// }
 		let $skillProficiencyContainer = $(`<div class="proficiency"></div>`)
 		let proficiency = ""
 		for(let i = 0; i<5; i++){
